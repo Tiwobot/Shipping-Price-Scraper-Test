@@ -6,7 +6,7 @@ import common
 
 SearchSourceCityandCountry=common.FromProvince+" "+common.FromCounty+" "+common.FromDetails
 SearchDestinationCityandCountry=common.ToProvince+" "+common.ToCounty+" "+common.ToDetails
-desiKG = common.desiKG
+desiWeight = common.desiKG
 desiWidth = common.desiWidth
 desiLength = common.desiLength
 desiHeight = common.desiHeight
@@ -25,3 +25,10 @@ driver.find_element(By.CSS_SELECTOR, "em:nth-child(3)").click()
 driver.find_element(By.ID, "DestinationCityAndCounty").send_keys(SearchDestinationCityandCountry)
 driver.find_element(By.CSS_SELECTOR, "em:nth-child(2)").click()
 driver.find_element(By.ID, "button-select-address").click()
+driver.find_element(By.CSS_SELECTOR, ".package > svg").click()
+driver.find_element(By.XPATH, "(//input[@type=\'number\'])[5]").send_keys(desiWidth)
+driver.find_element(By.XPATH, "(//input[@type=\'number\'])[6]").send_keys(desiLength)
+driver.find_element(By.XPATH, "(//input[@type=\'number\'])[7]").send_keys(desiHeight)
+driver.find_element(By.XPATH, "(//input[@type=\'number\'])[8]").send_keys(desiWeight)
+driver.find_element(By.ID, "btn-price-calculation").click()
+print(driver.find_element(By.CSS_SELECTOR, ".col-lg-6:nth-child(4) .package-item-content > div:nth-child(1) .form-control").text)
