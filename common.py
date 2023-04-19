@@ -1,6 +1,6 @@
 FromProvince = "Ankara"
 FromCounty = "Yenimahalle"
-FromDetails = "İvedik Mahallesi"
+FromDetails = "Işınlar Mahallesi"
 
 ToProvince = "Mersin"
 ToCounty = "Yenişehir"
