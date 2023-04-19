@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 import common
+from dependencies import ChromeDriverLocation
 
 SearchSourceCityandCountry=common.FromProvince+" "+common.FromCounty+" "+common.FromDetails
 SearchDestinationCityandCountry=common.ToProvince+" "+common.ToCounty+" "+common.ToDetails
@@ -12,7 +13,7 @@ desiLength = common.desiLength
 desiHeight = common.desiHeight
 isSMSwanted = common.isSMSwanted
 
-PATH = "D:\App Folders\chromedriver.exe"
+PATH = ChromeDriverLocation
 driver = webdriver.Chrome(PATH)
 driver.get("https://www.yurticikargo.com/tr/online-servisler/fiyat-hesapla")
 driver.implicitly_wait(2)
