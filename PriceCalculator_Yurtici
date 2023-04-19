@@ -1,0 +1,19 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+import common
+
+desiKG = common.desiKG
+desiWidth = common.desiWidth
+desiLength = common.desiLength
+desiHeight = common.desiHeight
+isSMSwanted = common.isSMSwanted
+
+PATH = "D:\App Folders\chromedriver.exe"
+driver = webdriver.Chrome(PATH)
+driver.get("https://www.yurticikargo.com/tr/online-servisler/fiyat-hesapla")
+driver.implicitly_wait(2)
+
+title = driver.title
+print(title)
