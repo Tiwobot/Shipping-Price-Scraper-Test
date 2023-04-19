@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 import common
 
+SearchSourceCityandCountry=common.FromProvince+" "+common.FromCounty+" "+common.FromDetails
+SearchDestinationCityandCountry=common.ToProvince+" "+common.ToCounty+" "+common.ToDetails
 desiKG = common.desiKG
 desiWidth = common.desiWidth
 desiLength = common.desiLength
@@ -17,3 +19,9 @@ driver.implicitly_wait(2)
 
 title = driver.title
 print(title)
+
+driver.find_element(By.ID, "SourceCityAndCounty").send_keys(SearchSourceCityandCountry)
+driver.find_element(By.CSS_SELECTOR, "em:nth-child(3)").click()
+driver.find_element(By.ID, "DestinationCityAndCounty").send_keys(SearchDestinationCityandCountry)
+driver.find_element(By.CSS_SELECTOR, "em:nth-child(2)").click()
+driver.find_element(By.ID, "button-select-address").click()
