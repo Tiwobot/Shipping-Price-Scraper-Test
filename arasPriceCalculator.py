@@ -12,6 +12,10 @@ ToSearch = common.ToProvince
 ToCityString = "//span[contains(.,'" + \
     common.ToProvince+" - "+common.ToCounty+"')]"
 ToDetails = common.ToDetails
+desiKG = common.desiKG
+desiWidth = common.desiWidth
+desiLength = common.desiLength
+desiHeight = common.desiHeight
 
 PATH = "D:\App Folders\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
@@ -29,7 +33,7 @@ try:
     print("cookie closer did it.")
 except:
     print("cookie closer failed.")
-    
+
 driver.find_element(By.ID, "mat-input-1").click()
 driver.find_element(By.ID, "mat-input-1").send_keys(FromSearch)
 driver.find_element(By.XPATH, (FromCityString)).click()
@@ -47,10 +51,10 @@ driver.find_element(By.CSS_SELECTOR, ".mat-select-placeholder").click()
 driver.find_element(By.CSS_SELECTOR, ".mat-option-text").click()
 
 driver.find_element(By.ID, "mat-input-5").click()
-driver.find_element(By.ID, "mat-input-5").send_keys("1")
-driver.find_element(By.ID, "mat-input-6").send_keys("2")
-driver.find_element(By.ID, "mat-input-7").send_keys("5")
-driver.find_element(By.ID, "mat-input-8").send_keys("10")
+driver.find_element(By.ID, "mat-input-5").send_keys(desiKG)
+driver.find_element(By.ID, "mat-input-6").send_keys(desiLength)
+driver.find_element(By.ID, "mat-input-7").send_keys(desiHeight)
+driver.find_element(By.ID, "mat-input-8").send_keys(desiWidth)
 
 driver.find_element(
     By.CSS_SELECTOR, ".col-md-12:nth-child(5) > .desi-btn").click()
