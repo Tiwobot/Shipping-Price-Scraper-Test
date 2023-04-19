@@ -70,5 +70,4 @@ if isSMSwanted:
     driver.find_element(
         By.CSS_SELECTOR, ".ng-star-inserted:nth-child(2) > .selectable-cards > .selectable-cards__icon").click()
 
-
 print(driver.find_element(By.CSS_SELECTOR, ".item-total-price").text)
