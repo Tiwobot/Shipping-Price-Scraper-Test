@@ -31,4 +31,5 @@ driver.find_element(By.XPATH, "(//input[@type=\'number\'])[6]").send_keys(desiLe
 driver.find_element(By.XPATH, "(//input[@type=\'number\'])[7]").send_keys(desiHeight)
 driver.find_element(By.XPATH, "(//input[@type=\'number\'])[8]").send_keys(desiWeight)
 driver.find_element(By.ID, "btn-price-calculation").click()
-print(driver.find_element(By.CSS_SELECTOR, ".col-lg-6:nth-child(4) .package-item-content > div:nth-child(1) .form-control").text)
+print(driver.find_element(By.CSS_SELECTOR, "#product-genaral-total > b:nth-child(1)").text)
+print(driver.find_element(By.CSS_SELECTOR, "#product-genaral-total > b:nth-child(3)").text)
