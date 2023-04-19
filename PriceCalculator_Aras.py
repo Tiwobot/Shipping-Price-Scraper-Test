@@ -35,13 +35,11 @@ try:
 except:
     print("cookie closer failed.")
 
-driver.find_element(By.ID, "mat-input-1").click()
 driver.find_element(By.ID, "mat-input-1").send_keys(FromSearch)
 driver.find_element(By.XPATH, (FromCityString)).click()
 
 driver.find_element(By.ID, "mat-input-3").send_keys(FromDetails)
 
-driver.find_element(By.ID, "mat-input-2").click()
 driver.find_element(By.ID, "mat-input-2").send_keys(ToSearch)
 driver.find_element(By.XPATH, (ToCityString)).click()
 
