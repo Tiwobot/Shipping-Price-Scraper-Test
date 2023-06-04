@@ -1,2 +1,2 @@
 # SendThrough Project:
-Get shipping price for your item from different compaines via using WebScraping
+Get shipping price for your item from different companies via using WebScraping.
